@@ -1,0 +1,89 @@
+<!-- tham khảo https://www.petclub.co.th/-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Care Products</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" a="" href="../img/logo.jpg">
+</head>
+<body>
+    <nav class = "notscroll" id ="navscroll">
+        <ul>
+            <li><a href="../home.html">
+                <img id="logo-body" src ="../img/logo.jpg" title="HOME">    
+                </a>
+            </li>
+            <li><a href="../home.html" title="HOME">HOME</a></li>
+            <li>
+                <div class = "dropdown">
+                    <a href="../products.html" title="Sản phẩm">Sản phẩm <i class="fa fa-chevron-down"></i></a>
+                    <div class = "dropdown-content">
+                        <a href = "../dog/dog.html">Chó</a>
+                        <a href = "../cat/cat.html">Mèo</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+        </ul>   
+        <ul> 
+            <li>
+                <input id="search" type="text" placeholder="Tìm kiếm...">
+                <button id ="buttonSearch">Tìm kiếm</button>
+            </li>
+            <li>
+                <a onclick="checkLogin()">
+                <img id ="user" src="../img/user.jpg" title="Người dùng">
+                </a>
+            </li>
+        </ul>       
+    </nav>
+    <main>
+        
+        <section id="content">
+            <div class="cart-item">
+                <img src="../img/mew_food/PETClub_felix_kitten_cover.jpg" alt="Product Image">
+                <div class="product-details">
+                  <h2>Tên sản phẩm</h2>
+                  <p>Giá: <span class="product-price">100,000đ</span></p>
+                </div>
+                <div class="product-actions">
+                  <button class="increase-quantity">+</button>
+                  <input type="number" value="1" min="1" class="product-quantity">
+                  <button class="decrease-quantity">-</button>
+                  <button class="remove-product">Xóa</button>
+                </div>
+                <div class="product-total">
+                    Tổng: <span class="product-total-price">100,000</span>đ
+                  </div>
+                </div>
+            <div class="discount-code">
+                <h4>Áp dụng mã giảm giá</h4>
+                <input type="text" id="discountCodeInput" placeholder="Nhập mã giảm giá của bạn tại đây">
+                <button id="applyDiscountButton">Áp dụng</button>
+            </div>  
+            <div class="cart-total">
+                <p class = "voucher">Mã giảm giá: -0đ</p>
+            <p class="total-price">Tổng tiền: 100,000đ</p>
+            <a href="../products.html"><button class="continue-shopping-button">Quay lại cửa hàng</button></a>
+            <button class="checkout-button">Tiến hành thanh toán</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©Shop Pet care product</p>    
+    </footer>
+    <script>
+        let isLogin = localStorage.getItem("token")? true : false
+
+    function checkLogin(){
+        if(isLogin){
+            window.location.href = "../account/profile.html"
+        }
+        else {
+            window.location.href = "../account/login.html"
+        }
+    }
+    </script>
+</body>
+</html>

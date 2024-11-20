@@ -1,0 +1,89 @@
+<!-- tham khảo https://www.petclub.co.th/-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Care Products</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" a="" href="../img/logo.jpg">
+</head>
+<body>
+    <nav class = "notscroll" id ="navscroll">
+        <ul>
+            <li><a href="../home.html">
+                <img id="logo-body" src ="../img/logo.jpg" title="HOME">    
+                </a>
+            </li>
+            <li><a href="../home.html" title="HOME">HOME</a></li>
+            <li>
+              <div class = "dropdown">
+                  <a href="../products.html" title="Sản phẩm">Sản phẩm <i class="fa fa-chevron-down"></i></a>
+                  <div class = "dropdown-content">
+                      <a href = "../dog/dog.html">Chó</a>
+                      <a href = "../cat/cat.html">Mèo</a>
+                  </div>
+              </div>
+          </li>
+            <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+        </ul>   
+        <ul> 
+            <li>
+                <input id="search" type="text" placeholder="Tìm kiếm...">
+                <button id ="buttonSearch">Tìm kiếm</button>
+            </li>
+            <li>
+              <a onclick="checkLogin()">
+                <img id ="user" src="../img/user.jpg" title="Người dùng">
+              </a>
+            </li>
+        </ul>       
+    </nav>
+    <main>
+      <link rel="stylesheet" href="../css/register.css  ">
+        <section id="content">
+          <div class="register-container">
+            <h2>Đăng ký</h2>
+            <button class="social-button google">Đăng ký với Google</button>
+            <button class="social-button facebook">Đăng ký với Facebook</button>
+            <div class="or-separator">
+              <span>Hoặc</span>
+            </div>
+            <form id="register-form">
+              <input type="email" id="register-email" placeholder="Email" onchange="validateForm()" required >
+              <input type="password" id="password" placeholder="Mật khẩu" onchange="validateForm()" required>
+              <input type="password" id="re-password" placeholder="Nhập lại mật khẩu" onchange="validateForm()" required>
+              <ul class="password-requirements">
+                <li>Mật khẩu phải chứa ít nhất 8 ký tự</li>
+                <li>Mật khẩu phải chứa ít nhất một chữ cái thường, một chữ cái hoa và một số</li>
+              </ul>
+              <div class="privacy-policy">
+                <input type="checkbox" id="privacy-policy" onchange="validateForm()" required>
+                <label for="privacy-policy">Tôi đã đọc và đồng ý với <a>Chính sách</a> bảo mật</label>
+              </div>
+              <button type="submit" id ="register-submit" value="Register" disabled>Đăng ký</button>
+              <p class="login-link">Đã có tài khoản? <a href="../account/login.html">Đăng nhập</a></p>
+              <div class = "error-box" style=" display: none;" id = "error-box">
+              </div>
+            </form>
+          </div>
+          
+        </section>
+    </main>
+    <footer>
+        <p>©Shop Pet care product</p>    
+    </footer>
+    <script src = "../js/register.js"></script>
+    <script>
+      let isLogin = localStorage.getItem("token")? true : false
+
+  function checkLogin(){
+      if(isLogin){
+          window.location.href = "../account/profile.html"
+      }
+      else {
+          window.location.href = "../account/login.html"
+      }
+  }
+  </script>
+</body>
+</html>

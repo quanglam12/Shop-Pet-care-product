@@ -1,0 +1,178 @@
+<!-- tham khảo https://www.petclub.co.th/-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Care Products</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" a="" href="img/logo.jpg">
+</head>
+<body>
+    <header>
+        <img id ="banner" src = "img/banner.jpg">
+        <a href="home.html">
+        <img id="logo" src ="img/logo.jpg" title="HOME">    
+        </a>
+    </header>
+    <nav class = "notscroll" id ="navscroll">
+        <ul>
+            <li><a href="home.html" title="HOME">HOME</a></li>
+            <li>
+                <div class = "dropdown">
+                    <a href="products.html" title="Sản phẩm">Sản phẩm <i class="fa fa-chevron-down"></i></a>
+                    <div class = "dropdown-content">
+                        <a href = "dog/dog.html">Chó</a>
+                        <a href = "cat/cat.html">Mèo</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+        </ul>
+        <ul> 
+            <li>
+                <input id="search" type="text" placeholder="Tìm kiếm...">
+                <button id ="buttonSearch">Tìm kiếm</button>
+            </li>
+            <li>
+                <a onclick="checkLogin()">
+                    <img id ="user" src="../img/user.jpg" title="Người dùng">
+                </a>
+            </li>
+        </ul>       
+    </nav>
+    <main>
+        
+        <section id="content">
+            <div class = "welcome">
+                <h1>Chào mừng đến với Shop Đồ Chăm Sóc Thú Cưng của chúng tôi!</h1>
+            </div>
+            <h2>Sản phẩm bán chạy</h2>
+            <div class = "items">
+                <div class = "item">
+                    <a href="#">
+                        <img src ="../img/dog_food/PETClub_wellness_dog_ocean_cover.jpg" title="Wellness Dog Ocean Cover" alt="Wellness Dog Ocean Cover">
+                    </a>
+                    <div class="ProductsCaption">
+                        <div class="ProductsName">
+                        <a href="#">Wellness Dog Ocean Cover</a>
+                        </div>
+                        <div class="ProductsPrice">
+                        <p>2.3 $</p>
+                        </div>
+                        <div class="ProductsAction">
+                        <div>
+                            <input type="checkbox" id="${product.id}"><label for="${product.id}">Quan tâm</label>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "item">
+                    <a href="#">
+                        <img src ="../img/mew_food/PETClub_Shopee_friskies_indoor_cover.jpg" title="Friskies Indoor Cover" alt="Friskies Indoor Cover">
+                    </a>
+                    <div class="ProductsCaption">
+                        <div class="ProductsName">
+                        <a href="#">Friskies Indoor Cover</a>
+                        </div>
+                        <div class="ProductsPrice">
+                        <p>2 $</p>
+                        </div>
+                        <div class="ProductsAction">
+                        <div>
+                            <input type="checkbox" id="${product.id}"><label for="${product.id}">Quan tâm</label>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "item">
+                    <a href="#">
+                        <img src ="../img/mew_food/PETClub_Shopee_friskies_sufing_cover.jpg" title="Friskies Sufing Cover" alt="Friskies Sufing Cover">
+                    </a>
+                    <div class="ProductsCaption">
+                        <div class="ProductsName">
+                        <a href="#">Friskies Sufing Cover</a>
+                        </div>
+                        <div class="ProductsPrice">
+                        <p>1 $</p>
+                        </div>
+                        <div class="ProductsAction">
+                        <div>
+                            <input type="checkbox" id="${product.id}"><label for="${product.id}">Quan tâm</label>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class ="introduce">
+                <ul>
+                <li>
+                    <div>
+                        <h2>Giới thiệu</h2>
+                        <p>Chúng tôi cung cấp một loạt các sản phẩm chăm sóc thú cưng chất lượng cao để giúp bạn chăm sóc cho người bạn nhỏ của mình.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                    <h2>Sản phẩm của chúng tôi</h2>
+                    <h3>Thức ăn cho thú cưng</h3>
+                    <p>Chúng tôi cung cấp nhiều loại thức ăn chất lượng cao cho cả chó và mèo, bao gồm thức ăn khô, thức ăn ướt, và thức ăn đặc biệt cho thú cưng có chế độ ăn kiêng hoặc yêu cầu dinh dưỡng đặc biệt.</p>
+                    <h3>Đồ chơi</h3>
+                    <p>Chúng tôi có đủ mọi thứ từ đồ chơi giáo dục cho thú cưng của bạn đến đồ chơi giải trí, giúp thú cưng của bạn vui vẻ và khỏe mạnh.</p>
+                    <h3>Phụ kiện</h3>
+                    <p>Chúng tôi cung cấp một loạt các phụ kiện từ dây dắt, rọ mõm, đến quần áo thời trang và giường nằm thoải mái cho thú cưng của bạn.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                    <a href="policy/policy.pdf"><h2>Chính sách</h2></a>
+                    <p>Chúng tôi có những chính sách phù hợp, đảm bảo an toàn và chất lượng sản phẩm. <a href="policy/policy.pdf">Chính sách</a></p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+            <div class ="col-maincontent">
+
+                <div class = "Products">
+                    <div class = "items" id = "items">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©Shop Pet care product</p>    
+    </footer>
+    <script src = "js/products_all.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+    if (window.scrollY <= 450) {
+        var id = document.getElementById('contact');
+        var navsc = document.getElementById('navscroll');
+
+        id.style.display = 'none';
+        navsc.style.position ='relative';
+    } else {
+        var id = document.getElementById('contact');
+        var navsc = document.getElementById('navscroll');
+
+        id.style.display = 'block';
+        navsc.style.position = 'fixed';
+        navsc.style.top= "0";
+    }
+        })
+    </script>
+    <script>
+        let isLogin = localStorage.getItem("token")? true : false
+
+function checkLogin(){
+    if(isLogin){
+        window.location.href = "account/profile.html"
+    }
+    else {
+        window.location.href = "account/login.html"
+    }
+}
+    </script>
+</body>
+</html>

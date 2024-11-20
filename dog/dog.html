@@ -1,0 +1,112 @@
+<!-- tham khảo https://www.petclub.co.th/-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Care Products</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" a="" href="../img/logo.jpg">
+</head>
+<body>
+    <header>
+        <img id ="banner" src = "../img/banner.jpg">
+        <a href="../home.html">
+        <img id="logo" src ="../img/logo.jpg" title="HOME">    
+        </a>
+    </header>
+    <nav class = "notscroll" id ="navscroll">
+        <ul>
+            <li><a href="../home.html" title="HOME">HOME</a></li>
+            <li>
+                <div class = "dropdown">
+                    <a href="../products.html" title="Sản phẩm">Sản phẩm <i class="fa fa-chevron-down"></i></a>
+                    <div class = "dropdown-content">
+                        <a href = "../dog/dog.html">Chó</a>
+                        <a href = "../cat/cat.html">Mèo</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+        </ul>
+        <ul> 
+            <li>
+                <input id="search" type="text" placeholder="Tìm kiếm...">
+                <button id ="buttonSearch">Tìm kiếm</button>
+            </li>
+            <li>
+                <a onclick="checkLogin()">
+                    <img id ="user" src="../img/user.jpg" title="Người dùng">
+                </a>
+            </li>
+        </ul>       
+    </nav>
+    <main>
+        <section id="content">
+            <div class ="col-maincontent">
+                <div class="divPageTitle-textcenter">
+                    <h1>Các sản phẩm</h1>
+                </div>
+                <br>
+                <div class = "Products">
+                    <div>
+                        <h3>Danh sách các sản phẩm</h3>
+                    </div>
+
+                    <div class = "items" id = "items">
+                    </div>
+                    <div id="pagination">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside id="contact">
+            <div class="cart">
+                <a href="../cart/cart.html">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count">Giỏ hàng</span>
+                </a>
+              </div>
+              <div class="wishlist">
+                <a href="#">
+                <i class="fa fa-heart"></i>
+                <span id="wishlist-count">Sản phẩm quan tâm</span>
+                </a>
+              </div>
+        </aside>
+    </main>
+    <footer>
+        <p>©Shop Pet care product</p>    
+    </footer>
+    <script src = "../js/products_dog.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+    if (window.scrollY <= 450) {
+        var id = document.getElementById('contact');
+        var navsc = document.getElementById('navscroll');
+
+        id.style.display = 'none';
+        navsc.style.position ='relative';
+    } else {
+        var id = document.getElementById('contact');
+        var navsc = document.getElementById('navscroll');
+
+        id.style.display = 'block';
+        navsc.style.position = 'fixed';
+        navsc.style.top= "0";
+    }
+        })
+    </script>
+    <script>
+        let isLogin = localStorage.getItem("token")? true : false
+
+    function checkLogin(){
+        if(isLogin){
+            window.location.href = "../account/profile.html"
+        }
+        else {
+            window.location.href = "../account/login.html"
+        }
+    }
+    </script>
+</body>
+</html>

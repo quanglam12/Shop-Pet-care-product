@@ -1,0 +1,114 @@
+<!-- tham khảo https://www.petclub.co.th/-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Care Products</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" a="" href="../img/logo.jpg">
+</head>
+<body onload = "loadInfo()">
+    <nav class = "notscroll" id ="navscroll">
+        <ul>
+            <li><a href="../home.html">
+                <img id="logo-body" src ="../img/logo.jpg" title="HOME">    
+                </a>
+            </li>
+            <li><a href="../home.html" title="HOME">HOME</a></li>
+            <li>
+                <div class = "dropdown">
+                    <a href="../products.html" title="Sản phẩm">Sản phẩm <i class="fa fa-chevron-down"></i></a>
+                    <div class = "dropdown-content">
+                        <a href = "../dog/dog.html">Chó</a>
+                        <a href = "../cat/cat.html">Mèo</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+        </ul>   
+        <ul> 
+            <li>
+                <input id="search" type="text" placeholder="Tìm kiếm...">
+                <button id ="buttonSearch">Tìm kiếm</button>
+            </li>
+            <li>
+                <a onclick="checkLogin">
+                <img id ="user" src="../img/user.jpg" title="Người dùng">
+                </a>
+            </li>
+        </ul>       
+    </nav>
+    <main>
+      <link rel="stylesheet" href="../css/profile.css  ">
+      <div class="account-nav">
+        <h2>Tài Khoản Của Tôi</h2>
+        <ul>
+            <a href="../cart/cart.htm"><li><p>Giỏ hàng</p></li></a>
+            <li><p>Đơn Hàng Đã Đặt</p></li>
+            <li><p>Địa Chỉ</p></li>
+            <li><p>Danh Sách Quan Tâm</p></li>
+            <li><p>Mã giảm giá</p></li>
+            <li><p>Thiết Lập Mật Khẩu</p></li>
+        </ul>
+    </div>
+    <div class="account-info" id = "showInfo">
+        <h2>Tài Khoản Của Tôi</h2>
+        <label for="email"><b>Email:</b></label>
+        <p id = "email"></p>
+        <label for="name"><b>Tên:</b></label>
+        <p id = "name"></p>
+        <label for="phone"><b>Điện Thoại:</b></label>
+        <p id = "phone"></p>
+        <label for="gender"><b>Giới Tính:</b></label>
+        <p id = "gender"></p>
+        <label for="birthday"><b>Ngày Sinh:</b></label>
+        <p id = "birthday"></p>
+        <label for="cmnd-cccd"><b>Số CMND/CCCD:</b></label>
+        <p id = "idnumber"></p>
+        <button class ="edit-profile" onclick="editProfile()"><i class="fa fa-edit"></i>Chỉnh sửa thông tin</button>
+        <button class="logout" onclick="logout()"><i class="fa fa-sign-out"></i> Đăng Xuất</button>
+    </div>
+    <div class="account-info" id = "editInfo">
+        <h2>Tài Khoản Của Tôi</h2>
+        <label for="name"><b>Tên:</b></label>
+        <input type="text" id="newname" name="name">
+        <label for="phone"><b>Điện Thoại:</b></label>
+        <input type="number" id="newphone" name="phone">
+        <label for="gender"><b>Giới Tính:</b></label>
+        <div>
+        <label><input type="radio" name="gender" value="male" checked> Nam</label>
+        <label><input type="radio" name="gender" value="female"> Nữ</label>
+        <label><input type="radio" name="gender" value="other"> Khác</label>
+        </div>
+        <label for="birthday"><b>Ngày Sinh:</b></label>
+        <input type="date" id="newbirthday" name="birthdate" value="2000-01-01">
+        <label for="idnumber"><b>Số CMND/CCCD:</b></label>
+        <input type="number" id="newidnumber" name="idnumber">
+        <label for = "password">Mật khẩu</label>
+        <input type="password" id = "password" name = "password">
+        <button class = "edit-profile" onclick="updateProfile()">Cập nhật</button>
+        <button class = "cancel" onclick="cancel()">Hủy bỏ</button>
+    </div>
+    </main>
+    <footer>
+        <p>©Shop Pet care product</p>    
+    </footer>
+    <script src = "../js/profile.js"></script>
+    <script>
+        let isLogin = localStorage.getItem("token")? true : false
+
+    function checkLogin(){
+        if(isLogin){
+            window.location.href = "../account/profile.html"
+        }
+        else {
+            window.location.href = "../account/login.html"
+        }
+    }
+    function logout(){
+        localStorage.removeItem("token");
+        window.location.href = "../home.html"
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.account-nav {
+    width: 20%;
+    float: left;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+}
+.account-nav a {
+    text-decoration: none;
+    color: black;
+}
+.account-nav li p {
+    margin-left: 20px;
+}
+.account-nav li:hover {
+    background-color:darkgrey ;
+    cursor: pointer;
+}
+.account-info {
+    width: 75%;
+    float: right;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.account-nav h2, .account-info h2 {
+    color: #333;
+}
+.account-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.account-nav ul li {
+    padding: 10px 0;
+}
+.account-info input[type="text"], .account-info input[type="email"], .account-info input[type="number"]  {
+    display: flex;
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+}
+.account-info input[type="date"] {
+    display: flex;
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+}
+.account-info input[type="radio"] {
+    padding: 30px;
+    margin: 10px 0;
+}
+.edit-profile {
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s ease-in-out;
+}
+.edit-profile:hover {
+    
+    background-color:mediumorchid;
+}
+.logout {
+    background-color: #f44336; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    float: right;
+    transition: background-color 1s ease-in-out;
+}
+.logout:hover {
+    background-color:brown;
+    color: white;
+}
+.cancel {
+    border-radius: 30px;
+    background-color: #f44336; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    float: right;
+    transition: background-color 1s ease-in-out;
+}
+.cancel:hover {
+    background-color:brown;
+    color: white;
+}
+#showInfo {
+    display: block;
+}
+#editInfo {
+    display: none;
+}

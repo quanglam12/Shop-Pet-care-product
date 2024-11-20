@@ -1,0 +1,21 @@
+.payment-result {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+  }
+  
+  .payment-result h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .payment-result.success {
+    background-color: #4CAF50;
+  }
+  
+  .payment-result.failure {
+    background-color: #f44336;
+  }
+  

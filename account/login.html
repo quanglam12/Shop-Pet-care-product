@@ -1,0 +1,68 @@
+<!-- tham khảo https://www.petclub.co.th/-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Care Products</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" a="" href="../img/logo.jpg">
+</head>
+<body>
+    <nav class = "notscroll" id ="navscroll">
+        <ul>
+            <li><a href="../home.html">
+                <img id="logo-body" src ="../img/logo.jpg" title="HOME">    
+                </a>
+            </li>
+            <li><a href="../home.html" title="HOME">HOME</a></li>
+            <li>
+                <div class = "dropdown">
+                    <a href="../products.html" title="Sản phẩm">Sản phẩm <i class="fa fa-chevron-down"></i></a>
+                    <div class = "dropdown-content">
+                        <a href = "../dog/dog.html">Chó</a>
+                        <a href = "../cat/cat.html">Mèo</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+        </ul>   
+        <ul> 
+            <li>
+                <input id="search" type="text" placeholder="Tìm kiếm...">
+                <button id ="buttonSearch">Tìm kiếm</button>
+            </li>
+            <li>
+                <a href="login.html">
+                <img id ="user" src="../img/user.jpg" title="Người dùng">
+                </a>
+            </li>
+        </ul>       
+    </nav>
+    <main>
+      <link rel="stylesheet" href="../css/login.css  ">
+        <section id="content">
+            <div class="login-container">
+                <h2>Đăng nhập</h2>
+                <button class="social-button google">Đăng nhập với Google</button>
+                <button class="social-button facebook">Đăng nhập với Facebook</button>
+                <div class="or-separator">
+                  <span>Hoặc</span>
+                </div>
+                <form id="login-form">
+                  <input type="email" id="login-email" placeholder="Email" required>
+                  <input type="password" id="password" placeholder="Mật khẩu" required>
+                  <a href="#" class ="forgot-password">Quên mật khẩu?</a>
+                  <button type="submit" >Đăng nhập</button>
+                  <p class="register-link">Chưa có tài khoản? <a href="../account/register.html">Đăng ký</a></p>
+                  <div class = "error-box" id = "error-box" style=" display: none;">
+                  </div>
+                </form>
+              </div>
+        </section>
+    </main>
+    <footer>
+        <p>©Shop Pet care product</p>    
+    </footer>
+    <script src = "../js/login.js"></script>
+</body>
+</html>
